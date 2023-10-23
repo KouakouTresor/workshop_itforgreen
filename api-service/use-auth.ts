@@ -16,6 +16,11 @@ const register = async (body: any) => {
   return req;
 };
 
-const analyticsService = { login, register };
+const getMe = async () => {
+  const req: ApiResponse = (await useApi.get("/auth/get-me")) as ApiResponse;
+  return req;
+};
+
+const analyticsService = { login, register, getMe };
 
 export default analyticsService;
