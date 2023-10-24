@@ -3,11 +3,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { TypeSelector } from "@/components/atoms";
-import { ACard } from "@/components/molecules";
-import associations from "@/mocks/associations";
-import types from "@/mocks/types";
+import { ECard } from "@/components/molecules";
+import events from "@/mocks/events";
+import needs from "@/mocks/needs";
 
-const Home = () => {
+export default function Dashboard() {
   const [selectedType, setSelectedType] = useState<string | undefined>(
     undefined
   );
@@ -27,33 +27,37 @@ const Home = () => {
             </Button>
           )}
           <TypeSelector
-            name="Trier par type"
+            name="Trier par besoins"
             state={selectedType}
             setState={setSelectedType}
-            values={types}
+            values={needs}
           />
         </div>
       </div>
       <div className="grid grid-cols-3 gap-4 mt-4">
-        {associations.map((a) => (
+        {events.map((e) => (
           <>
-            {selectedType && a.type.includes(selectedType) ? (
-              <ACard
-                key={`association-${a.title}`}
-                title={a.title}
-                description={a.description}
-                image={a.image}
-                type={a.type}
+            {selectedType && e.needs.includes(selectedType) ? (
+              <ECard
+                key={`evenement-${e.event_name}`}
+                title={e.event_name}
+                association={e.association}
+                description={e.description}
+                image={e.image}
+                needs={e.needs}
+                date={e.date}
               />
             ) : null}
 
             {!selectedType ? (
-              <ACard
-                key={`association-${a.title}`}
-                title={a.title}
-                description={a.description}
-                image={a.image}
-                type={a.type}
+              <ECard
+                key={`evenement-${e.event_name}`}
+                title={e.event_name}
+                association={e.association}
+                description={e.description}
+                image={e.image}
+                needs={e.needs}
+                date={e.date}
               />
             ) : null}
           </>
@@ -61,6 +65,4 @@ const Home = () => {
       </div>
     </main>
   );
-};
-
-export default Home;
+}

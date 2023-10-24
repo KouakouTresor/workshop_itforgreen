@@ -2,9 +2,6 @@
 import Link from "next/link";
 import { UserAuthForm } from "@/components/organisms";
 
-
-
-
 const AuthenticationPage = () => {
   return (
     <>

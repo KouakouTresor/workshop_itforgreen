@@ -32,7 +32,7 @@ const UserAuthForm = ({ className }: UserAuthFormProps) => {
   };
 
   const authentification = async () => {
-    router.push("/")
+    router.push("/");
     try {
       const req = await useAuth.login({
         email: login,
@@ -85,6 +85,7 @@ const UserAuthForm = ({ className }: UserAuthFormProps) => {
               onChange={(e: any) => setPassword(e.target.value)}
               className="w-full"
               placeholder="********"
+              type="password"
             />
           </div>
           <Button
