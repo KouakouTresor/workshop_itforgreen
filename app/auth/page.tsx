@@ -1,11 +1,9 @@
-import { Metadata } from "next";
+"use client"
 import Link from "next/link";
 import { UserAuthForm } from "@/components/organisms";
 
-export const metadata: Metadata = {
-  title: "Authentication",
-  description: "Page de connextion",
-};
+
+
 
 const AuthenticationPage = () => {
   return (

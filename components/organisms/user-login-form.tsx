@@ -32,6 +32,7 @@ const UserAuthForm = ({ className }: UserAuthFormProps) => {
   };
 
   const authentification = async () => {
+    router.push("/")
     try {
       const req = await useAuth.login({
         email: login,

@@ -1,10 +1,14 @@
+import Header from "@/components/ui/Header";
 import ButtonAppBar from "@/components/ui/Header";
+import Dashboard from "./dashboard/page";
 
 const Home = () => {
   return (
     <div>
-    <ButtonAppBar />
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+      <main className="flex  flex-col">
+      <Header />
+      <Dashboard />
+      </main>
     </div>
   );
 };
