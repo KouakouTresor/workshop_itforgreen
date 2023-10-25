@@ -1,16 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { TypeSelector } from "@/components/atoms";
 import { ACard } from "@/components/molecules";
 import { useSearch } from "@/store/search";
-import associations from "@/mocks/associations";
 import types from "@/mocks/types";
 import { IAssociation } from "@/interfaces/assiociation";
+import { useAssociation } from "@/api-service";
 
 const Home = () => {
   const { search } = useSearch();
+  const [associations, setAssociations] = useState<any[]>([]);
   const [selectedType, setSelectedType] = useState<string | undefined>(
     undefined
   );
@@ -42,6 +43,19 @@ const Home = () => {
       );
     }
   };
+
+  const initAssociations = async () => {
+    try {
+      const { data } = await useAssociation.getAssociations({});
+      setAssociations(data);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    initAssociations();
+  }, []);
 
   return (
     <main className="flex flex-col p-6">

@@ -13,8 +13,6 @@ const association = {
 };
 
 const Home = ({ params }: { params: { id: string } }) => {
-  console.log(params.id);
-
   return (
     <main className="flex flex-col p-6">
       <div className="flex items-start justify-between">
