@@ -6,6 +6,7 @@ import { TypeSelector } from "@/components/atoms";
 import { ACard } from "@/components/molecules";
 import { useSearch } from "@/store/search";
 import types from "@/mocks/types";
+import associationsData from "@/mocks/associations";
 import { IAssociation } from "@/interfaces/assiociation";
 import { useAssociation } from "@/api-service";
 
@@ -47,7 +48,11 @@ const Home = () => {
   const initAssociations = async () => {
     try {
       const { data } = await useAssociation.getAssociations({});
-      setAssociations(data);
+      if (data) {
+        setAssociations(data);
+      } else {
+        setAssociations(associationsData);
+      }
     } catch (e) {
       console.error(e);
     }
