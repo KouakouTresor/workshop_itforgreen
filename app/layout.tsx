@@ -14,6 +14,9 @@ export default function RootLayout({
 
   return (
     <html lang="fr">
+      <head>
+        <link rel="icon" type="png" href="/logo.png" />
+      </head>
       <body>
         {pathname === "/auth" ? null : <Header />}
         {children}

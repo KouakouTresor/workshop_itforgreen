@@ -32,12 +32,12 @@ const Header = () => (
           </Link>
           <Link href="/events" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Dons
+              Autour de moi
             </NavigationMenuLink>
           </Link>
           <Link href="/events" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Maps
+              À propos
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

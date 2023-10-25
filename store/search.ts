@@ -5,7 +5,7 @@ interface ISearchStore {
   setSearch: (value: string) => void;
 }
 
-export const useUser = create<ISearchStore>((set: any) => ({
+export const useSearch = create<ISearchStore>((set: any) => ({
   search: undefined,
-  setSearch: (value: string) => set(() => value),
+  setSearch: (value) => set({ search: value }),
 }));

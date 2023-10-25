@@ -1,18 +1,20 @@
+import Link from "next/link";
 import {
   Card,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const ACard = ({
+  id,
   title,
   description,
   image,
   type,
 }: {
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -30,7 +32,9 @@ const ACard = ({
           </Badge>
         ))}
       </div>
-      <CardTitle>{title}</CardTitle>
+      <Link href={`/association/${id}`}>
+        <CardTitle>{title}</CardTitle>
+      </Link>
       <CardDescription>{description}</CardDescription>
     </CardHeader>
   </Card>
