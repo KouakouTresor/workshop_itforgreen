@@ -22,45 +22,6 @@ const associations = [
     type: ["Environnement"],
   },
   {
-    title: "Secours populaire français",
-    description:
-      "Le Secours populaire français est une association de solidarité qui lutte contre la précarité et l'exclusion. Elle apporte de l'aide aux personnes en difficulté, en particulier dans le domaine de l'alimentation et du logement.",
-    image:
-      "https://www.coordinationsud.org/wp-content/uploads/logo-secours-populaire-francais.jpg",
-    type: ["Solidarité", "Aide sociale"],
-  },
-  {
-    title: "Amnesty International",
-    description:
-      "Amnesty International se bat pour les droits de l'homme à travers le monde. Cette organisation œuvre pour mettre fin à la torture, à la peine de mort et à d'autres violations des droits humains.",
-    image:
-      "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b7/Amnesty_International_2008_logo.svg/1200px-Amnesty_International_2008_logo.svg.png",
-    type: ["Droits de l'homme"],
-  },
-  {
-    title: "Médecins Sans Frontières",
-    description:
-      "Médecins Sans Frontières, aussi connue sous le nom de Doctors Without Borders, fournit des soins médicaux d'urgence aux populations touchées par des crises humanitaires. Leur action sauve des vies à travers le monde.",
-    image:
-      "https://upload.wikimedia.org/wikipedia/fr/thumb/6/69/MSF.svg/1200px-MSF.svg.png",
-    type: ["Aide humanitaire", "Santé"],
-  },
-  {
-    title: "Croix-Rouge française",
-    description:
-      "La Croix-Rouge française est une organisation humanitaire qui intervient en cas de catastrophe naturelle, de conflit armé et dans le domaine de la santé. Elle aide les plus vulnérables et forme des secouristes.",
-    image: "https://www.croix-rouge.fr/crf_logo.png",
-    type: ["Aide humanitaire", "Santé"],
-  },
-  {
-    title: "UNICEF",
-    description:
-      "L'UNICEF, ou Fonds des Nations unies pour l'enfance, œuvre pour le bien-être des enfants à travers le monde. L'organisation travaille à l'amélioration de la santé, de l'éducation et des droits des enfants.",
-    image:
-      "https://www.livreshebdo.fr/sites/default/files/2023-05/Couleur-logo-UNICEF.jpg",
-    type: ["Enfance", "Éducation"],
-  },
-  {
     title: "Nature Conservancy",
     description:
       "Nature Conservancy est une organisation internationale qui se consacre à la préservation de la nature et de la biodiversité. Elle protège des territoires naturels cruciaux pour la planète.",
